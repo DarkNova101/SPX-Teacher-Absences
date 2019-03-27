@@ -1,0 +1,15 @@
+{
+    "name": "nehal/spx-teacher-absences",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Dark",
+            "email": "nehall.neh@gmail.com"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "^4.3",
+        "ext-curl": "*",
+        "ext-json": "*"
+    }
+}
