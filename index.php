@@ -14,12 +14,23 @@ require_once('settings.php');
 	text-align: center;
 	margin: 50px 0;
 }
+#signout-button {
+    display: block;
+    text-align: center;
+    margin: 50px 0;
+}
 
 </style>
 </head>
 
 <body>
 <?php
+if (isset($_POST['message'])) {
+    echo $_POST['message'];
+} else {
+    echo "Please Sign in<br>";
+}
+
 if (!isset($_SESSION['user_name']) || !isset($_SESSION['logged_in']) ) {
     print_r($_SESSION);
     ?>
@@ -27,9 +38,13 @@ if (!isset($_SESSION['user_name']) || !isset($_SESSION['logged_in']) ) {
 <?php
 } else {
     print_r($_SESSION);
+    foreach ($_SESSION as $sess) {
+        echo "<br>" . $sess;
+    }
     echo "Logged In!";
 }
 
 ?>
+<a id="signout-button" href="signout.php">Sign Out</a>
 </body>
 </html>

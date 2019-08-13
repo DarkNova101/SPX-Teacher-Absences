@@ -24,7 +24,8 @@ $_SESSION['user_email'] = $user_info['email'];
 $_SESSION['user_id'] = $user_info['id'];
 $_SESSION['logged_in'] = time();
 
-header('Location: index.php')
+header("Location: ./index.php");
+die();
 
 ?>
 <head>
